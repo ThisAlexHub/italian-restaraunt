@@ -1,38 +1,504 @@
-.App {
-  text-align: center;
+* {
+    font-family: Garamond;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+
+#root {
+    /* width:100%; */
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
+button {
+    cursor: pointer;
+    font-size: 15px;
+    font-weight: bold;
+}
+
+
+body {
+    background-color: #fffaf6;
+}
+
+header {
+    display:flex;
+    justify-content: space-between;
+    height: 100px;
+    align-items: center;
+    width: 60%;
+    margin: auto;
+}
+
+header img{
+    height: 50px;
+}
+
+header nav {
+    width: 60%;
+    margin-right:70px; 
+}
+
+header nav ul {
+    display:flex; 
+    margin: 0px;
+    padding: 0px;
+    display:flex;
+    justify-content: space-around;
+    list-style-type: none; 
+}
+
+a {
+    color: inherit; 
+    text-decoration: inherit; 
+    font-weight: bold;
+}
+
+.main-background{
+    background-color: #495E57;
+    height: 300px;
+}
+
+.about {
+    width: 60%;
+    margin: auto;
+    height: 100%;
+    display:flex;
+    justify-content: space-between;
+}
+
+.info{
+    width: 50%;
+}
+
+.image{
+    padding-top: 40px;
+    width:50%;
+    /* margin-left: 150px; */
+}
+
+.image img {
+    display: block;
+    /* width:60%; */
+    width:380px;
+    margin: auto;
+    border-radius: 25px;
+}
+
+.about h1{
+    font-size:3em;
+    margin:0;
+    color:#C3A50F;
+}
+
+.about p{
+    font-size:2em; 
+    margin:0;
+    color: #F4F5F5;
+    margin-bottom: 20px;
+}
+
+.about .discription{
+    font-size:1.5em;
+    color: #F4F5F5;
+    margin-bottom: 5px;
+    width:60%;
+}
+
+.reserve {
+    height: 35px;
+    width: 150px;
+    background-color:#F4CE15;
+    border-radius: 10px;
+    border-width: 1px;
+}
+
+.specials {
+    width:60%;
+    margin: auto;
+    display: flex;
+    margin-top:180px;
+    justify-content: space-between;
+}
+
+.menu-btn{
+    margin-right:75px;  
+    background-color:#F4CE15;
+    height: 50px;
+    width: 150px;
+    border-radius: 10px;
+    border-width: 0px;  
+    display: block;
+    font-size: 18px;
+}
+
+
+.specials h1 {
+    font-size:2.5em;
+    margin:0px;
+}
+
+.special-options {
+    display: flex;
+    justify-content: space-around;
+    width:65%;
+    margin: auto;
+    margin-top: 100px;
+    min-height: 550px;
+    flex-wrap: wrap;
+    margin-bottom: 20px;
+}
+
+.special-options img{
+    display: block;
+    width:100%;
+    border-top-left-radius: 5%;
+    border-top-right-radius: 5%;
+}
+
+.special-option{
+    margin-bottom: 20px;
+    width:300px;
+    min-height: 500px;
+}
+
+.special-option div{
+    background-color: rgb(231, 229, 229);
+    width:100%;
+    min-height: 270;
+    border-bottom-left-radius: 5%;
+    border-bottom-right-radius: 5%;
+}
+
+
+.special-option div p:nth-child(3){
+    font-weight: bold;
+    font-size: 1.1em;
+    
+}
+
+
+.special-option div div{
+    display: flex;
+    margin:auto;
+    justify-content: space-between;
+    width:100%;
+  
+ }
+
+
+ .special-option div div p {
+    font-weight: bold;
+    font-size: 1.1em;
+ }
+
+ .special-option:nth-child(3){
+    margin-right: 100px;
+ }
+
+ .text{
+    padding-left: 20px;
+    padding-top: 20px;
+    padding-bottom: 30px;
+    margin:0px;
+    padding-right: 15px;
+    
+ } 
+
+ .description {
+    height: 75px;
+ }
+
+ @media only screen and (max-width: 1555px) {
+    .special-options {
+        width:50%;
+    }
+    .special-option:nth-child(3){
+        margin-right: 0px;
+    }
+    .about .discription{
+        width:80%;
+    }
+
   }
-}
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+  @media only screen and (max-width: 1500px) {
+   
   }
-  to {
-    transform: rotate(360deg);
+
+
+  @media only screen and (max-width: 1260px) {
+    .special-options {
+        width:60%;
+    }
+    header nav {
+        margin-right: 0px;
+    }
+
+    .menu-btn {
+        margin-right: 0px;
+    }
+
+    .image img {
+        width: 100%;
+    }
+
+    .specials{
+        margin-top: 13%;
+    }
   }
-}
+
+  @media only screen and (max-width: 1050px) {
+    
+    header nav {
+        visibility: hidden;
+    }
+    .bm-burger-button{
+        visibility: visible !important;
+    }
+
+    .bm-menu nav{
+        visibility: visible;
+    }
+    .special-options {
+        width:70%;
+    }
+
+    .about .discription{
+        width:90%;
+    }
+
+    .about h1 {
+        font-size: 2em;
+        padding-top: 5px;
+    }
+
+    .about p{
+        font-size: 1.5em;
+    }
+
+    .about .discription{
+        font-size: 1.4em;
+    }
+
+    .specials h1{
+        font-size: 2em;
+    }
+
+    .specials{
+        margin-top: 8%;
+    }
+
+  }
+
+
+  @media only screen and (max-width: 750px) {
+    .image img {
+        width: 225px;
+    }
+
+    .about h1 {
+        font-size: 2.2em;
+    }
+
+    .about p {
+        font-size: 1.7em;
+    }
+
+    .about .discription {
+        font-size: 1.2em;
+    }
+    .specials{
+        width:70%;
+    }
+
+  }
+
+  @media only screen and (max-width: 680px) {
+    .about {
+        width:80%;
+    }
+
+    .specials {
+        flex-direction: column;
+    }
+
+    .specials h1 {
+        text-align: center;
+        margin-bottom: 10px;
+    }
+
+    .menu-btn{
+        margin: auto;
+    }
+
+    .specials{
+        margin-top: 20px;
+    }
+
+    header{
+        width: 80%;
+    }
+
+    .special-options{
+        margin-top: 50px;
+    }
+
+    .description{
+
+    }
+  }
+
+  @media only screen and (max-width: 510px) {
+    .about h1 {
+        font-size: 1.8em;
+    }
+
+    .about p {
+        font-size: 1.5em;
+    }
+
+    .about .discription {
+        font-size: 1.2em;
+    }
+
+    .about{
+        flex-direction: column;
+    }
+
+    .main-background{
+        height: 100%;
+        padding-bottom: 20px;
+    
+    }
+    .info{
+        margin: auto;
+        width:100%;
+    }
+
+    .about h1{
+        text-align: center; 
+    }
+
+    .about p{
+        text-align: center;
+    }
+
+    .about .discription{
+        width:300px;
+        margin: auto;
+    }
+    .reserve{
+        margin: auto;
+        display: block;
+    }
+    .image{
+        width: 100%;
+        padding-top: 20px;
+    }
+    body {
+
+        width:fit-content;
+    }
+
+
+  }
+
+  .bm-item-list a{
+    color:#F4CE15;
+    padding: 5px;
+  }
+
+  form{
+    display: grid; 
+    max-width: 200px; 
+    gap: 20px;
+    margin: auto;
+    border:  #495E57;
+    border-radius: 1px;
+    border-style: solid;
+    padding: 20px 150px;
+   
+
+  }
+
+  .reservation{
+    width: 500px;
+    margin: auto;
+  }
+  .reservation h1{
+    text-align: center;
+  }
+
+  /* .option-header{
+    height: 50px;
+  }
+ */
+
+
+  /* Position and sizing of burger button */
+.bm-burger-button {
+    position: fixed;
+    width: 36px;
+    height: 30px;
+    right: 36px;
+    top: 36px;
+    visibility: hidden;
+  }
+  
+  /* Color/shape of burger icon bars */
+  .bm-burger-bars {
+    background: #495E57;
+  }
+  
+  /* Color/shape of burger icon bars on hover*/
+  .bm-burger-bars-hover {
+    background: #F4CE15;
+  }
+  
+  /* Position and sizing of clickable cross button */
+  .bm-cross-button {
+    height: 24px;
+    width: 24px;
+  }
+  
+  /* Color/shape of close button cross */
+  .bm-cross {
+    background: #bdc3c7;
+  }
+  
+  /*
+  Sidebar wrapper styles
+  Note: Beware of modifying this element as it can break the animations - you should not need to touch it in most cases
+  */
+  .bm-menu-wrap {
+    position: fixed;
+    height: 100%;
+  }
+  
+  /* General sidebar styles */
+  .bm-menu {
+    background: #495E57;
+    padding: 2.5em 1.5em 0;
+    font-size: 1.15em;
+    opacity: 0.9;
+  }
+  
+  /* Morph shape necessary with bubble or elastic */
+  .bm-morph-shape {
+    fill: #373a47;
+  }
+  
+  /* Wrapper for item list */
+  .bm-item-list {
+    color: #b8b7ad;
+    padding: 0.8em;
+  }
+  
+  /* Individual item */
+  .bm-item {
+    display: inline-block;
+  }
+  
+  /* Styling of overlay */
+  .bm-overlay {
+    background: rgba(0, 0, 0, 0.3);
+  }
+
